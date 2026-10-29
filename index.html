@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sharp &amp; Co. Barbers – Book your cut in the app</title>
+  <meta name="description" content="Classic barbershop. New app. Book, reschedule and skip the wait.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="pole" aria-hidden="true"><div class="pole-stripes"></div></div>
+
+  <header class="nav">
+    <a class="logo" href="#top">Sharp &amp; Co.</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#services">Services</a>
+      <a href="#app">The app</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-small" href="#waitlist">Get the app</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>A sharper cut, booked in ten seconds.</h1>
+        <p class="lead">Same chairs, same hot towels, same barbers you trust. Now you can pick your barber and your time from your phone. No calls, no waiting around.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#waitlist">Join the launch list</a>
+          <a class="btn btn-ghost" href="#services">See prices</a>
+        </div>
+        <p class="note">App launches 15 December on iOS and Android.</p>
+      </div>
+
+      <!-- Interactive phone mockup -->
+      <div class="phone" aria-label="App preview">
+        <div class="phone-screen">
+          <p class="phone-title">Book a cut</p>
+          <div class="phone-barber">
+            <span class="avatar">M</span>
+            <div><strong>Marco</strong><br><small>Fades &amp; beards</small></div>
+          </div>
+          <p class="phone-label">Saturday 12 December</p>
+          <div class="slots" id="slots">
+            <button class="slot">09:30</button>
+            <button class="slot taken" disabled>10:15</button>
+            <button class="slot">11:00</button>
+            <button class="slot">11:45</button>
+            <button class="slot taken" disabled>13:00</button>
+            <button class="slot">13:45</button>
+          </div>
+          <button class="btn phone-confirm" id="confirm" disabled>Pick a time</button>
+          <p class="phone-msg" id="phone-msg" role="status"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <h2>What we do</h2>
+      <p class="section-intro">Walk-ins are still welcome. Booking just saves you the wait.</p>
+      <ul class="price-list">
+        <li><div><h3>Classic cut</h3><p>Scissors or clippers, finished with a straight-razor neck.</p></div><span class="price">€25</span></li>
+        <li><div><h3>Skin fade</h3><p>Clean blend from skin to length, styled to match.</p></div><span class="price">€30</span></li>
+        <li><div><h3>Beard trim</h3><p>Shaped, lined up and finished with hot towel and oil.</p></div><span class="price">€18</span></li>
+        <li><div><h3>Cut and beard</h3><p>The full treatment in one 60-minute visit.</p></div><span class="price">€40</span></li>
+        <li><div><h3>Hot towel shave</h3><p>Straight razor, warm lather, slow and careful.</p></div><span class="price">€28</span></li>
+      </ul>
+    </section>
+
+    <section class="section section-dark" id="app">
+      <h2>Your barber, in your pocket</h2>
+      <div class="steps">
+        <article>
+          <span class="step-no">1</span>
+          <h3>Choose your barber</h3>
+          <p>See who is in today and what they are best at.</p>
+        </article>
+        <article>
+          <span class="step-no">2</span>
+          <h3>Pick a time</h3>
+          <p>Live availability. If a slot is open, it is yours.</p>
+        </article>
+        <article>
+          <span class="step-no">3</span>
+          <h3>Show up and sit down</h3>
+          <p>We send a reminder an hour before. Running late? Move your slot in two taps.</p>
+        </article>
+      </div>
+      <p class="perk">Everyone on the launch list gets their first cut at half price.</p>
+    </section>
+
+    <section class="section" id="waitlist">
+      <div class="waitlist">
+        <h2>Get the app on launch day</h2>
+        <p class="section-intro">Leave your email and we will send one message when it is live. Nothing else.</p>
+        <form id="waitlist-form" novalidate>
+          <label for="email">Email address</label>
+          <div class="form-row">
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button class="btn" type="submit">Join the list</button>
+          </div>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-light" id="visit">
+      <h2>Come by</h2>
+      <div class="visit-grid">
+        <div>
+          <h3>Find us</h3>
+          <p>Brink 12<br>7411 BT Deventer</p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p>Tue to Fri 09:00 to 18:00<br>Saturday 09:00 to 16:00<br>Sunday and Monday closed</p>
+        </div>
+        <div>
+          <h3>Call</h3>
+          <p>0570 000 000<br>hello@sharpandco.example</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Sharp &amp; Co. Barbers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
